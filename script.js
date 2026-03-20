@@ -145,3 +145,10 @@ function spinWheel() {
 
   }, 10000);
 }
+window.onload = function () {
+  let step = localStorage.getItem("step");
+
+  if (step) {
+    next(step);
+  }
+};
