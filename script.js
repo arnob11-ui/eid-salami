@@ -91,3 +91,9 @@ window.onload=function(){
 }
 
 document.getElementById("spinBtn").onclick=spinWheel;
+// Claim Button Click
+document.getElementById("claimBtn").addEventListener("click", function(){
+    const img = document.getElementById("claimImage");
+    img.style.display = "block";   // ইমেজ দেখাবে
+    img.scrollIntoView({behavior: "smooth"}); // optional, scroll করবে ইমেজে
+});
