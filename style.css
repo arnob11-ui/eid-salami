@@ -74,3 +74,19 @@ canvas {
   color: white;
   margin-top: 10px;
 }
+.dev{
+  color: white;
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  margin: 0;
+}
+
+.arnob{
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right, #fff200, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
