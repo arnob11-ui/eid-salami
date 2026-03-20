@@ -8,7 +8,14 @@ function next(step) {
 }
 
 function startGame() {
-  userName = document.getElementById("name").value || "Friend";
+  let nameInput = document.getElementById("name").value.trim();
+
+  if(nameInput === ""){
+    alert("⚠️ Please enter your real name!");
+    return;
+  }
+
+  userName = nameInput;
   next(5);
   drawWheel();
 }
