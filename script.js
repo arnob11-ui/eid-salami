@@ -83,3 +83,15 @@ function showResult(win){
   let audio = new Audio("https://www.myinstants.com/media/sounds/tada.mp3");
   audio.play();
 }
+function showResult(win){
+  document.getElementById("result").innerHTML =
+    `🎉 Congrats ${userName}! You got 💰 ${win} tk`;
+
+  document.getElementById("screenshotText").style.display = "block";
+  document.getElementById("claimBtn").style.display = "inline-block";
+
+  confetti({
+    particleCount:200,
+    spread:80
+  });
+}
