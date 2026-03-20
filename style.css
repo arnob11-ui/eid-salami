@@ -125,3 +125,55 @@ canvas {
   background: #00ffcc;
   box-shadow: 0 0 8px #00ffcc, 0 0 12px #00ffcc;
 }
+.devBox{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+
+/* Developed by → Arial Rounded MT Bold */
+.dev{
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+  color: white;
+  margin:0;
+}
+
+/* ARNOB → Bree Serif */
+.arnob{
+  font-family: 'Bree Serif', serif;
+  color: #fff200;
+  margin:0;
+  position: relative;
+  text-shadow: 0 0 6px #fff200;
+}
+
+/* RGB blinking neon underline */
+.arnob::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:100%;
+  height:3px;
+  border-radius:5px;
+
+  background: linear-gradient(90deg, red, blue, lime, red);
+  background-size: 200% 100%;
+
+  animation: rgbMove 2s linear infinite;
+
+  box-shadow: 
+    0 0 6px red,
+    0 0 10px blue,
+    0 0 14px lime;
+}
+
+/* Animation */
+@keyframes rgbMove{
+  0%{background-position:0% 0;}
+  100%{background-position:200% 0;}
+}
+.arnob{
+  text-shadow: 0 0 8px #fff200, 0 0 12px #fff200;
+}
