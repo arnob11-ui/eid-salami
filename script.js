@@ -85,7 +85,7 @@ function showResult(win){
 }
 function showResult(win){
   document.getElementById("result").innerHTML =
-    `🎉 Congrats ${userName}! You got  ${win} tk 💵;
+    `🎉 Congrats ${userName}! You got 💰 ${win} tk`;
 
   document.getElementById("screenshotText").style.display = "block";
   document.getElementById("claimBtn").style.display = "inline-block";
