@@ -53,3 +53,24 @@ canvas {
   width: 100%;
   max-width: 300px;
 }
+.bkash{
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.title{
+  color: #00ffcc;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.shot{
+  display: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+}
