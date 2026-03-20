@@ -249,3 +249,29 @@ canvas{
 
   text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
 }
+.dev-text {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Bahnschrift SemiBold', sans-serif;
+}
+
+.arnob {
+  font-family: 'Bree Serif', serif;
+  font-size: 18px;
+  font-weight: bold;
+
+  /* 🔥 Yellow glow text */
+  color: #ffe600;
+
+  /* Neon glow */
+  text-shadow: 
+    0 0 5px #ffe600,
+    0 0 10px #ffe600,
+    0 0 20px #00ffcc;
+
+  /* underline */
+  border-bottom: 3px solid #00ffcc;
+  padding-bottom: 2px;
+}
