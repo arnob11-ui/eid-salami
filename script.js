@@ -70,25 +70,25 @@ function spin() {
 }
 
 function showResult(win){
-  document.getElementById("result").innerText =
-    `🎉 Congrats ${userName}! You got ${win} tk`;
 
-  document.getElementById("claimBtn").style.display="block";
-
-  confetti({
-    particleCount:200,
-    spread:80
-  });
-
-  let audio = new Audio("https://www.myinstants.com/media/sounds/tada.mp3");
-  audio.play();
-}
-function showResult(win){
   document.getElementById("result").innerHTML =
     `🎉 Congrats ${userName}! You got 💰 ${win} tk`;
 
+  // 🔊 2টা sound একসাথে
+  let moneySound = new Audio("soundsmoney.mp3");
+  let winSound = new Audio("soundswin.mp3");
+
+  // 🎚️ volume control
+  moneySound.volume = 0.3; // low sound
+  winSound.volume = 1.0;   // high sound
+
+  // ▶️ play both
+  moneySound.play();
+  winSound.play();
+
   document.getElementById("screenshotText").style.display = "block";
   document.getElementById("claimBtn").style.display = "inline-block";
+}
 
   confetti({
     particleCount:200,
