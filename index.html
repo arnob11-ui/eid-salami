@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Salami</title>
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eid Salami</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -12,71 +14,75 @@
 <div class="container">
 
   <!-- STEP 1 -->
-  <div id="step1" class="card"></div>
-    <img src="images/1.jpg">
+  <div id="step1" class="card">
+    <img src="images/1.jpg" alt="Step 1 Image">
     <button onclick="next(2)">Next ➡</button>
     <div class="dev-text">
-  Developed by 
-  <a href="developer.html" class="arnob-link">ARNOB</a>
-</div>
+      Developed by 
+      <a href="developer.html" class="arnob-link">ARNOB</a>
+    </div>
   </div>
 
   <!-- STEP 2 -->
-  <div class="card" id="step2">
-    <img src="images/2.jpg">
+  <div id="step2" class="card">
+    <img src="images/2.jpg" alt="Step 2 Image">
     <button onclick="next(3)">Click to see ARNOB'S Message</button>
   </div>
 
   <!-- STEP 3 -->
-  <div class="card" id="step3">
-    <img src="images/msg.jpg">
+  <div id="step3" class="card">
+    <img src="images/msg.jpg" alt="Step 3 Message">
     <button onclick="next(4)">Next</button>
   </div>
 
   <!-- STEP 4 -->
-  <div class="card" id="step4">
+  <div id="step4" class="card">
     <h4>✨ EID SALAMI ✨</h4>
     <input type="text" id="name" placeholder="Enter your Real Name" required>
     <button onclick="startGame()">Start</button>
   </div>
 
-<!-- STEP 5 -->
-<div class="card" id="step5">
+  <!-- STEP 5 -->
+  <div id="step5" class="card">
 
-  <!-- 💸 eid-mubarak  (UP) -->
-  <img src="images/eid-mubarak.jpg" class="eid-mubarak">
+    <!-- Eid Mubarak Image -->
+    <img src="images/eid-mubarak.jpg" class="eid-mubarak" alt="Eid Mubarak">
 
-  <!-- ✨ Title -->
- <h2 class="title">EID SALAMI SPINNER-2026</h2>
+    <!-- Title -->
+    <h2 class="title">EID SALAMI SPINNER-2026</h2>
 
-<div class="devBox">
-  <h3 class="dev">Developed by</h3>
-  <a href="developer.html" class="arnob">ARNOB</a>
+    <!-- Developed by -->
+    <div class="devBox">
+      <h3 class="dev">Developed by</h3>
+      <a href="developer.html" class="arnob">ARNOB</a>
+    </div>
+
+    <!-- Spinner pointer -->
+    <div class="pointer"></div>
+
+    <!-- Spinner Wheel -->
+    <canvas id="wheel"></canvas>
+
+    <!-- Spin Button -->
+    <button onclick="spin()">SPIN</button>
+
+    <!-- Result -->
+    <p id="result"></p>
+
+    <!-- Screenshot Text -->
+    <p id="screenshotText" class="shot">Etar ekta screenshot nen 📸</p>
+
+    <!-- Claim Button -->
+    <button id="claimBtn">Claim Salami</button>
+
+    <!-- Claim Image -->
+    <img id="claimImage" src="images/claim.jpg" alt="Claim Image">
+
+  </div>
+
 </div>
 
-  <!-- 🔺 Pointer -->
-  <div class="pointer"></div>
-
-  <!-- 🎡 Wheel -->
-  <canvas id="wheel"></canvas>
-
-  <!-- 🔘 Spin Button -->
-  <button onclick="spin()">SPIN</button>
-
-  <!-- 🎉 Result -->
-  <p id="result"></p>
-
-  <!-- 📸 Screenshot Text -->
-  <p id="screenshotText" class="shot">Etar ekta screenshot nen 📸</p>
-
-  <!-- 🎁 Claim Button -->
-  <button id="claimBtn">Claim Salami</button>
-
-  <!-- 🖼 Claim Image -->
-  <img id="claimImage" src="images/claim.jpg">
-
-</div>
-
+<!-- Scripts -->
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
