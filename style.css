@@ -90,3 +90,38 @@ canvas {
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
 }
+.devBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Developed by */
+.dev{
+  font-family: 'Bree Serif', serif;
+  color: white;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ARNOB */
+.arnob{
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #fff200;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Neon underline */
+.arnob::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #00ffcc;
+  box-shadow: 0 0 8px #00ffcc, 0 0 12px #00ffcc;
+}
