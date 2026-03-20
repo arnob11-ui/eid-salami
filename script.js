@@ -95,3 +95,53 @@ function showResult(win){
     spread:80
   });
 }
+const segments = [1, 2, 4, 5, 7, 10, 15];
+
+// 🎯 Weighted random (low tk বেশি আসবে)
+function getResult() {
+  let rand = Math.random();
+
+  if (rand < 0.25) return 1;
+  if (rand < 0.45) return 2;
+  if (rand < 0.65) return 4;
+  if (rand < 0.80) return 5;
+  if (rand < 0.92) return 7;
+  if (rand < 0.97) return 10;
+  return 15;
+}
+let hasPlayed = localStorage.getItem("played");
+
+function spinWheel() {
+
+  // ❌ Already played block
+  if (hasPlayed) {
+    alert("You already played... Good Luck!");
+    return;
+  }
+
+  let result = getResult();
+  let index = segments.indexOf(result);
+
+  let anglePerPart = 360 / segments.length;
+  let finalAngle = (360 * 5) + (360 - (index * anglePerPart));
+
+  let wheel = document.getElementById("wheel");
+
+  wheel.style.transition = "transform 10s ease-out";
+  wheel.style.transform = `rotate(${finalAngle}deg)`;
+
+  // ⏱ 10 sec পরে result show
+  setTimeout(() => {
+
+    document.getElementById("result").innerHTML =
+      `🎉 Congrats! You got 💰 ${result} tk`;
+
+    // 🔊 SOUND PLAY
+    document.getElementById("sound1").play();
+    document.getElementById("sound2").play();
+
+    // ✅ lock spin
+    localStorage.setItem("played", "yes");
+
+  }, 10000);
+}
