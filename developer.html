@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Developer Info</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Anek+Bangla:wght@400;700&family=Hind+Siliguri:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    font-family:'Anek Bangla', sans-serif;
+    background:black;
+    color:white;
+    text-align:center;
+}
+
+/* Title */
+.title{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* Profile Image */
+.profile{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:4px solid orange;
+    object-fit:cover;
+}
+
+/* Name */
+.name{
+    font-family:'Bree Serif', serif;
+    font-size:24px;
+    margin-top:10px;
+    color:#00ffcc;
+}
+
+/* Sub text */
+.sub{
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+/* RED BOX (Neon 🔥) */
+.red-box{
+    border:2px solid red;
+    padding:15px;
+    border-radius:15px;
+    margin:20px auto;
+    max-width:350px;
+    font-family:'Hind Siliguri', sans-serif;
+    font-weight:bold;
+    color:white;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Neon Animation */
+@keyframes glow{
+    from{
+        box-shadow:0 0 5px red;
+    }
+    to{
+        box-shadow:0 0 20px red, 0 0 40px red;
+    }
+}
+
+/* Bengali Big Text */
+.big-text{
+    font-size:18px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+/* Features */
+.features{
+    margin-top:20px;
+    font-size:16px;
+}
+
+.features p{
+    margin:8px 0;
+}
+
+/* Back Button */
+.back-btn{
+    margin-top:25px;
+    padding:12px 28px;
+    border:none;
+    background:#ff00cc;
+    color:white;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 0 15px #ff00cc;
+}
+
+.back-btn:hover{
+    box-shadow:0 0 25px #ff00cc;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2 class="title">ডেভেলপার তথ্য</h2>
+
+<img src="images/profile.jpg" class="profile">
+
+<div class="name">ARNOB</div>
+<div class="sub">আপনার ডেভেলপার</div>
+
+<div class="red-box">
+এই ওয়েবঅ্যাপ <span class="test">TEST Mode</span> এ আছে। <br>
+Future Update এ আরো অসংখ্য Features থাকবে, ইনশাআল্লাহ।
+</div>
+
+<div class="big-text">
+এই webapp এর কিছু বৈশিষ্ট্য:
+</div>
+
+<div class="features">
+<p>✔ Premium UI Design</p>
+<p>✔ Mobile Friendly</p>
+</div>
+
+<button class="back-btn" onclick="goBack()">← Back</button>
+
+<script>
+function goBack(){
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
