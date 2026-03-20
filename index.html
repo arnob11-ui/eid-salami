@@ -4,14 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eid Salami</title>
+
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* Basic resets */
+body { margin:0; padding:0; background:#000; color:#fff; font-family:sans-serif; }
+.container { max-width:500px; margin:20px auto; text-align:center; }
+.card { display:none; margin-bottom:20px; }
+.card.active { display:block; }
+
+img { max-width:100%; border-radius:12px; margin-top:10px; }
+
+button {
+  margin-top:20px;
+  padding:12px 20px;
+  border-radius:12px;
+  border:none;
+  background:#ff00cc;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:16px;
+}
+button:hover{background:#ff33ff;}
+
+input { padding:10px; width:80%; border-radius:10px; border:none; margin-top:10px; }
+
+.dev-text, .devBox{ margin-top:10px; }
+.dev-text a, .devBox a{ text-decoration:none; color:#fff200; font-weight:bold; font-family:'Bree Serif', serif; text-shadow:0 0 8px #fff200,0 0 12px #fff200; }
+.dev-text{ text-align:center; font-size:16px; }
+
+.pointer{
+  width:0; height:0;
+  border-left:15px solid transparent;
+  border-right:15px solid transparent;
+  border-bottom:25px solid red;
+  margin:10px auto;
+  animation: blink 1s infinite;
+}
+@keyframes blink{0%{opacity:1;}50%{opacity:0.5;}100%{opacity:1;}}
+
+#wheel{ display:block; margin:20px auto; max-width:300px; }
+
+.shot{ display:none; font-size:18px; font-weight:bold; margin-top:10px; }
+
+</style>
 </head>
 
 <body>
+
 <div class="container">
 
-  <!-- STEP 1 (Front Page) -->
+  <!-- STEP 1 -->
   <div id="step1" class="card active">
     <img src="images/1.jpg" alt="Step 1 Image">
     <button onclick="next(2)">Next ➡</button>
@@ -20,19 +69,19 @@
     </div>
   </div>
 
-  <!-- STEP 2 (Greeting) -->
+  <!-- STEP 2 -->
   <div id="step2" class="card">
     <img src="images/2.jpg" alt="Step 2 Greeting">
     <button onclick="next(3)">Click to see ARNOB'S Message</button>
   </div>
 
-  <!-- STEP 3 (Wish) -->
+  <!-- STEP 3 -->
   <div id="step3" class="card">
     <img src="images/msg.jpg" alt="Step 3 Wish">
     <button onclick="next(4)">Next</button>
   </div>
 
-  <!-- STEP 4 (Name Input) -->
+  <!-- STEP 4 -->
   <div id="step4" class="card">
     <h4>✨ EID SALAMI ✨</h4>
     <input type="text" id="name" placeholder="Enter your Real Name" required>
@@ -43,6 +92,7 @@
   <div id="step5" class="card">
     <img src="images/eid-mubarak.jpg" class="eid-mubarak" alt="Eid Mubarak">
     <h2 class="title">EID SALAMI SPINNER-2026</h2>
+
     <div class="devBox">
       <h3 class="dev">Developed by</h3>
       <a href="developer.html" class="arnob">ARNOB</a>
@@ -58,10 +108,8 @@
     <p id="screenshotText" class="shot">Etar ekta screenshot nen 📸</p>
     <button id="claimBtn" style="display:none;">Claim Salami</button>
 
-    <!-- Hidden audio elements -->
     <audio id="sound1" src="sound1.mp3"></audio>
     <audio id="sound2" src="sound2.mp3"></audio>
-
   </div>
 
 </div>
