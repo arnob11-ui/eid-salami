@@ -226,3 +226,6 @@ canvas{
     margin:8px 0;
     color:#bffcff;
 }
+.next-btn {
+  margin-top: 30px; /* আগের চেয়ে বেশি */
+}
