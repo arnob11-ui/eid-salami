@@ -26,18 +26,20 @@ function drawWheel(){
     let arc=Math.PI*2/segments.length;
     ctx.clearRect(0,0,300,300);
     for(let i=0;i<segments.length;i++){
+        let angle=i*arc;
         ctx.beginPath();
         ctx.fillStyle = i%2==0 ? "#00ffcc" : "#0099ff";
         ctx.moveTo(150,150);
-        ctx.arc(150,150,150,i*arc,(i+1)*arc);
+        ctx.arc(150,150,150,angle,angle+arc);
         ctx.fill();
 
+        ctx.save();
+        ctx.translate(150,150);
+        ctx.rotate(angle+arc/2);
         ctx.fillStyle="black";
         ctx.font="bold 16px Arial";
-        let angle=i*arc+arc/2;
-        let x=150+Math.cos(angle)*100;
-        let y=150+Math.sin(angle)*100;
-        ctx.fillText(segments[i]+" tk", x-10, y+5);
+        ctx.fillText(segments[i]+" tk", 60,5);
+        ctx.restore();
     }
 }
 
@@ -77,11 +79,15 @@ function spinWheel(){
     },10000);
 }
 
-// Front page show on reload
+// Front page show first
 window.onload=function(){
     let step=localStorage.getItem("step");
-    if(step){ next(step); }
-    else{ document.getElementById("step1").classList.add("active"); }
+    if(step && document.getElementById("step"+step) && step!=5){
+        next(step);
+    } else {
+        document.getElementById("step1").classList.add("active");
+        localStorage.removeItem("step");
+    }
 }
 
 document.getElementById("spinBtn").onclick=spinWheel;
