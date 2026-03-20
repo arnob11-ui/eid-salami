@@ -275,4 +275,22 @@ canvas{
   border-bottom: 3px solid #00ffcc;
   padding-bottom: 2px;
 }
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid red;
 
+  margin: auto;
+  position: relative;
+  top: 20px;
+
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
