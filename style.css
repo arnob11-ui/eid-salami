@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f2027, #000);
+  font-family: Arial;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+}
+
+.card {
+  display: none;
+  padding: 20px;
+  margin: auto;
+  max-width: 350px;
+  border-radius: 20px;
+  border: 2px solid #00ffe5;
+  box-shadow: 0 0 25px #00ffe5;
+  background: rgba(0,0,0,0.6);
+}
+
+.card.active {
+  display: block;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #ff00cc;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px #ff00cc;
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+}
+
+canvas {
+  width: 100%;
+  max-width: 300px;
+}
