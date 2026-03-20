@@ -151,3 +151,12 @@ canvas {
 .arnob{
   text-shadow: 0 0 8px #fff200, 0 0 12px #fff200;
 }
+.dev{
+  font-family: "Bahnschrift SemiBold SemiConden", Bahnschrift, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+canvas{
+  display:block;
+  margin: 20px auto; /* এটা gap দেবে */
+}
