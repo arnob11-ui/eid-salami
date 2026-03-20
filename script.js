@@ -95,3 +95,6 @@ function showResult(win){
     spread:80
   });
 }
+function goBack(){
+    window.location.href = "index.html";
+}
