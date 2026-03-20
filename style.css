@@ -275,3 +275,19 @@ canvas{
   border-bottom: 3px solid #00ffcc;
   padding-bottom: 2px;
 }
+.arnob {
+  font-weight: bold;
+
+  /* Yellow color */
+  color: #ffe600;
+
+  /* Glow effect 🔥 */
+  text-shadow: 
+    0 0 5px #ffe600,
+    0 0 10px #ffe600,
+    0 0 20px #00ffcc;
+
+  /* Cyan underline */
+  border-bottom: 3px solid #00ffcc;
+  padding-bottom: 2px;
+}
