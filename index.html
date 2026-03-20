@@ -35,14 +35,34 @@
     <button onclick="startGame()">Start</button>
   </div>
 
-  <!-- STEP 5 -->
-  <div class="card" id="step5">
-    <img src="images/bkash" style="width:120px; margin-bottom:10px;">
-    <canvas id="wheel"></canvas>
-    <button onclick="spin()">SPIN</button>
-    <p id="result"></p>
-    <button id="claimBtn" style="display:none;">Claim Salami</button>
-  </div>
+<!-- STEP 5 -->
+<div class="card" id="step5">
+
+  <!-- 🔺 Triangle Pointer -->
+  <div class="pointer"></div>
+
+  <!-- 🎡 Wheel -->
+  <canvas id="wheel"></canvas>
+
+  <!-- 💸 bKash Image -->
+  <img src="images/bkash.jpg" style="width:120px; margin-top:10px;">
+
+  <!-- 🔘 Spin Button -->
+  <button onclick="spin()">SPIN</button>
+
+  <!-- 🎉 Result -->
+  <p id="result"></p>
+
+  <!-- 📸 Claim লেখা -->
+  <p id="screenshotText" style="display:none; font-weight:bold; font-size:18px;">
+    Etar ekta screenshot nen 📸
+  </p>
+
+  <!-- 🎁 Claim Button -->
+  <button id="claimBtn" style="display:none;">Claim Salami</button>
+
+  <!-- 🖼 Claim Image -->
+  <img id="claimImage" src="images/claim.jpg" style="display:none; width:100%; margin-top:10px;">
 
 </div>
 
