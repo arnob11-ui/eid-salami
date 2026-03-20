@@ -229,3 +229,23 @@ canvas{
 .next-btn {
   margin-top: 30px; /* আগের চেয়ে বেশি */
 }
+.dev-text {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 16px;
+  color: white;
+}
+
+.arnob {
+  font-weight: bold;
+  font-size: 18px;
+
+  background: linear-gradient(90deg, #fff700, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  border-bottom: 2px solid #00ffcc;
+  padding-bottom: 3px;
+
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
